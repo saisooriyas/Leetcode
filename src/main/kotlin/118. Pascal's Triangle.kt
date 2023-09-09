@@ -4,7 +4,6 @@ class Solution {
     fun generate(numRows: Int): List<List<Int>> {
         val pascalval : MutableList<Int> = mutableListOf()
         val pascal : MutableList<MutableList<Int>> = mutableListOf()
-        var value : Int
 
         for (times in 0..<numRows) {
             val tempPascalval = pascalval.toMutableList()
@@ -13,10 +12,10 @@ class Solution {
             }
             pascal.add(tempPascalval)
         }
-        return pascal;
+        return pascal
     }
 
-    fun check(n : Int, k : Int): Int {
+    private fun check(n : Int, k : Int): Int {
         var res = 1
         var c = k
         if (k> n-k)
